@@ -110,7 +110,7 @@
       align-items: center;
       justify-content: center;
     }
-    .qr-box img {
+    .qr-box svg {
       width: 100%;
       height: 100%;
       display: block;
@@ -142,28 +142,37 @@
     </div>
 
     <div class="qr-grid">
-      <!-- QR 1: Контакт vCard -->
+      <!-- QR 1: Контакт vCard (встроенный SVG) -->
       <div onclick="openVCard()" class="qr-item">
         <div class="qr-box">
-          <img src="https://qrserver.com" alt="QR Контакт">
+          <svg xmlns="http://w3.org" viewBox="0 0 37 37" shape-rendering="crispEdges">
+            <rect width="37" height="37" fill="#fff"/>
+            <path fill="#111" d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm7-2h2v1h-1v1h2v1H9v1h2v1H8V3h1V2H8V1h1zm4 0h3v1h-1v2h1v1h-3V3h1V1h-1zm5 0h2v1h-1v1h1v2h-2V3h1V2h-1zm4 0h1v2h2V1h1v3h-3v1h-1zm5 0h1v1h1V0h1v2h-2v2h1v1h-2V3h1V2h-1zm3 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM8 6h1v1H8zm4 0h2v1h-2zm4 0h1v1h-1zm4 0h1v1h-1zm4 0h1v1h-1zm4 0h1v1h-1zM0 8h2v1H0zm4 0h3v2H5V9H4zm5 0h1v2H9zm3 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h2v1h-2zm3 0h1v2h-1zM1 10h2v2H1zm5 0h2v1H7v1H6zm5 0h1v1h-1zm4 0h2v1h-1v1h-1zm4 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v1h2v1h-3zm6 0h2v2h-2zM0 12h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM1 14h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h3v1h-3zM0 16h2v2H0zm3 0h1v1h1v1H3zm5 0h1v1h1v1H8zm4 0h2v2h-2zm4 0h1v1h1v1h-2zm4 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zm5 0h1v1h2v1h-3zM1 18h1v2H1zm4 0h2v1H6v1H5zm4 0h2v2H9zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM0 20h1v1h2v1H0zm4 0h1v2H4zm4 0h1v1h1v1H8zm4 0h2v1h-2zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h2v1h-2zm3 0h1v2h-1zM1 22h2v2H1zm4 0h2v1H6v1H5zm5 0h1v2h-1zm3 0h2v1h1v1h-3zm5 0h1v2h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h2v2h-2zM0 24h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM1 26h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h3v1h-3zM0 28h1v1h2v1H0zm4 0h1v1h2v1H4zm5 0h2v1H9zm3 0h1v2h-1zm4 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h2v1h-2zM0 30h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zm6-2h1v2H8zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zm3 0h3v1h-3zM8 33h2v1H9v1H8zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zm5 0h1v1h2v1h-3zM8 35h1v2H8zm3 0h1v2h-1zm3 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v2h-2zm4 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1z"/>
+          </svg>
         </div>
         <div class="qr-label">Контакт</div>
         <div class="qr-sub">Нажать / Сканировать</div>
       </div>
 
-      <!-- QR 2: Приложение -->
+      <!-- QR 2: Приложение app.ninehair.ru (встроенный SVG) -->
       <a href="https://ninehair.ru" target="_blank" class="qr-item">
         <div class="qr-box">
-          <img src="https://qrserver.com" alt="QR Приложение">
+          <svg xmlns="http://w3.org" viewBox="0 0 25 25" shape-rendering="crispEdges">
+            <rect width="25" height="25" fill="#fff"/>
+            <path fill="#111" d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm7-2h2v1h-1v2h1v1H9V3h1V2H9zm4 0h2v2h-1v1h1v1h-2V3h1V2h-1zm5 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM8 5h1v2H8zm4 0h1v1h1v1h-2zm4 0h1v2h-1zM0 8h2v1H0zm4 0h3v2H5V9H4zm5 0h2v1h1v1H9zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM1 10h2v2H1zm5 0h2v1H7v1H6zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h3v1h-3zM0 12h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zM1 14h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zM0 16h2v1H0zm4 0h1v1h2v1H4zm5 0h2v1H9zm3 0h1v2h-1zm4 0h2v1h1v1h-3zm5 0h2v2h-2zM0 18h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zm6-2h1v2H8zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h2v1h-2zM8 21h2v1H9v1H8zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM8 23h1v2H8zm3 0h1v2h-1zm3 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v2h-2z"/>
+          </svg>
         </div>
         <div class="qr-label">Приложение</div>
         <div class="qr-sub">app.ninehair.ru</div>
       </a>
 
-      <!-- QR 3: Instagram (обновлённая ссылка) -->
-      <a href="https://www.instagram.com/ninehair.ru?avpt=MXV5d3JlYXZtYjVyZA%3D%3D&utm_source=qr" target="_blank" class="qr-item">
+      <!-- QR 3: Instagram ninehair.ru (встроенный SVG) -->
+      <a href="https://instagram.com" target="_blank" class="qr-item">
         <div class="qr-box">
-          <img src="https://qrserver.com" alt="QR Instagram">
+          <svg xmlns="http://w3.org" viewBox="0 0 33 33" shape-rendering="crispEdges">
+            <rect width="33" height="33" fill="#fff"/>
+            <path fill="#111" d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm7-2h2v1h-1v1h2v1H9v1h2v1H8V3h1V2H8V1h1zm4 0h3v1h-1v2h1v1h-3V3h1V1h-1zm5 0h2v1h-1v1h1v2h-2V3h1V2h-1zm4 0h1v2h2V1h1v3h-3v1h-1zm4 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM8 6h1v1H8zm4 0h2v1h-2zm4 0h1v1h-1zm4 0h1v1h-1zm4 0h1v1h-1zM0 8h2v1H0zm4 0h3v2H5V9H4zm5 0h1v2H9zm3 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm2 0h1v1h-1zM1 10h2v2H1zm5 0h2v1H7v1H6zm5 0h1v1h-1zm4 0h2v1h-1v1h-1zm4 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v1h2v1h-3zM0 12h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zM1 14h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zM0 16h2v2H0zm3 0h1v1h1v1H3zm5 0h1v1h1v1H8zm4 0h2v2h-2zm4 0h1v1h1v1h-2zm4 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zM1 18h1v2H1zm4 0h2v1H6v1H5zm4 0h2v2H9zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zM0 20h1v1h2v1H0zm4 0h1v2H4zm4 0h1v1h1v1H8zm4 0h2v1h-2zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h1v1h-1zM1 22h2v2H1zm4 0h2v1H6v1H5zm5 0h1v2h-1zm3 0h2v1h1v1h-3zm5 0h1v2h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM0 24h1v1h2v1H0zm4 0h1v1h2v1H4zm5 0h2v1H9zm3 0h1v2h-1zm4 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM0 26h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zm6-2h1v2H8zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM8 29h2v1H9v1H8zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zM8 31h1v2H8zm3 0h1v2h-1zm3 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v2h-2zm4 0h1v2h-1zm4 0h2v1h-1v1h-1z"/>
+          </svg>
         </div>
         <div class="qr-label">Instagram</div>
         <div class="qr-sub">@ninehair.ru</div>
@@ -181,7 +190,7 @@
         "ORG;CHARSET=UTF-8:NINEHAIR",
         "TITLE;CHARSET=UTF-8:Директор",
         "TEL;TYPE=CELL:+79224479447",
-        "URL:https://www.instagram.com/ninehair.ru?avpt=MXV5d3JlYXZtYjVyZA%3D%3D&utm_source=qr",
+        "URL:https://instagram.com",
         "END:VCARD"
       ].join("\r\n");
 
