@@ -17,15 +17,15 @@
       justify-content: center;
       align-items: center;
       min-height: 100vh;
-      padding: 20px;
+      padding: 16px;
       color: #ffffff;
     }
     .card {
       background: #141414;
       width: 100%;
-      max-width: 440px;
+      max-width: 420px;
       border-radius: 26px;
-      padding: 34px 24px;
+      padding: 28px 20px;
       border: 1px solid #262626;
       box-shadow: 0 18px 40px rgba(0, 0, 0, 0.65);
       text-align: center;
@@ -41,31 +41,31 @@
       border: 1px solid rgba(216, 237, 28, 0.35);
       padding: 6px 14px;
       border-radius: 999px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
     h1 {
-      font-size: 27px;
+      font-size: 26px;
       font-weight: 700;
-      margin-bottom: 6px;
+      margin-bottom: 4px;
       color: #ffffff;
     }
     .role {
       font-size: 15px;
       color: #9e9e9e;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
     }
     .actions {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
     .btn-primary {
       display: block;
       background: #d8ed1c;
       color: #0d0d0d;
       text-decoration: none;
-      padding: 14px 24px;
+      padding: 14px 20px;
       border-radius: 14px;
       font-size: 16px;
       font-weight: 700;
@@ -76,56 +76,98 @@
       background: #1f1f1f;
       color: #ffffff;
       text-decoration: none;
-      padding: 12px 24px;
+      padding: 12px 20px;
       border-radius: 14px;
       font-size: 14px;
       font-weight: 600;
       border: 1px solid #303030;
       cursor: pointer;
     }
-    .qr-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
+    .qr-section {
       border-top: 1px solid #242424;
-      padding-top: 24px;
+      padding-top: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .qr-main {
+      background: #1a1a1a;
+      border: 1px solid #2c2c2c;
+      border-radius: 18px;
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+      cursor: pointer;
+    }
+    .qr-main .qr-box {
+      width: 118px;
+      height: 118px;
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+    .qr-main-info h3 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 4px;
+    }
+    .qr-main-info p {
+      font-size: 12px;
+      color: #9e9e9e;
+      line-height: 1.4;
+    }
+    .qr-main-info span {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 11px;
+      font-weight: 600;
+      color: #d8ed1c;
+    }
+    .qr-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
     }
     .qr-item {
+      background: #1a1a1a;
+      border: 1px solid #2c2c2c;
+      border-radius: 18px;
+      padding: 14px 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-decoration: none;
       color: inherit;
-      cursor: pointer;
     }
     .qr-box {
       background: #ffffff;
       border: 2px solid #d8ed1c;
-      border-radius: 14px;
-      padding: 7px;
-      margin-bottom: 8px;
-      width: 100%;
-      aspect-ratio: 1 / 1;
+      border-radius: 12px;
+      padding: 8px;
+      margin-bottom: 10px;
+      width: 132px;
+      height: 132px;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    .qr-box svg {
-      width: 100%;
-      height: 100%;
+    .qr-box canvas {
+      width: 100% !important;
+      height: 100% !important;
       display: block;
     }
     .qr-label {
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 700;
       color: #ffffff;
-      line-height: 1.3;
+      line-height: 1.2;
     }
     .qr-sub {
-      font-size: 10px;
+      font-size: 11px;
       color: #d8ed1c;
-      margin-top: 2px;
-      opacity: 0.9;
+      margin-top: 3px;
     }
   </style>
 </head>
@@ -141,63 +183,135 @@
       <button type="button" onclick="openVCard()" class="btn-secondary">Сохранить контакт в телефон</button>
     </div>
 
-    <div class="qr-grid">
-      <!-- QR 1: Контакт vCard (встроенный SVG) -->
-      <div onclick="openVCard()" class="qr-item">
-        <div class="qr-box">
-          <svg xmlns="http://w3.org" viewBox="0 0 37 37" shape-rendering="crispEdges">
-            <rect width="37" height="37" fill="#fff"/>
-            <path fill="#111" d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm7-2h2v1h-1v1h2v1H9v1h2v1H8V3h1V2H8V1h1zm4 0h3v1h-1v2h1v1h-3V3h1V1h-1zm5 0h2v1h-1v1h1v2h-2V3h1V2h-1zm4 0h1v2h2V1h1v3h-3v1h-1zm5 0h1v1h1V0h1v2h-2v2h1v1h-2V3h1V2h-1zm3 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM8 6h1v1H8zm4 0h2v1h-2zm4 0h1v1h-1zm4 0h1v1h-1zm4 0h1v1h-1zm4 0h1v1h-1zM0 8h2v1H0zm4 0h3v2H5V9H4zm5 0h1v2H9zm3 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h2v1h-2zm3 0h1v2h-1zM1 10h2v2H1zm5 0h2v1H7v1H6zm5 0h1v1h-1zm4 0h2v1h-1v1h-1zm4 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v1h2v1h-3zm6 0h2v2h-2zM0 12h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM1 14h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h3v1h-3zM0 16h2v2H0zm3 0h1v1h1v1H3zm5 0h1v1h1v1H8zm4 0h2v2h-2zm4 0h1v1h1v1h-2zm4 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zm5 0h1v1h2v1h-3zM1 18h1v2H1zm4 0h2v1H6v1H5zm4 0h2v2H9zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM0 20h1v1h2v1H0zm4 0h1v2H4zm4 0h1v1h1v1H8zm4 0h2v1h-2zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h2v1h-2zm3 0h1v2h-1zM1 22h2v2H1zm4 0h2v1H6v1H5zm5 0h1v2h-1zm3 0h2v1h1v1h-3zm5 0h1v2h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h2v2h-2zM0 24h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM1 26h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h3v1h-3zM0 28h1v1h2v1H0zm4 0h1v1h2v1H4zm5 0h2v1H9zm3 0h1v2h-1zm4 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h2v1h-2zM0 30h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zm6-2h1v2H8zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zm3 0h3v1h-3zM8 33h2v1H9v1H8zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zm5 0h1v1h2v1h-3zM8 35h1v2H8zm3 0h1v2h-1zm3 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v2h-2zm4 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1z"/>
-          </svg>
+    <div class="qr-section">
+      <!-- Крупный QR 1: Контакт -->
+      <div onclick="openVCard()" class="qr-main">
+        <div class="qr-box" id="qr-contact"></div>
+        <div class="qr-main-info">
+          <h3>Сохранить контакт</h3>
+          <p>Наведите камеру телефона на код, чтобы сразу добавить номер в записную книжку</p>
+          <span>Нажать или сканировать →</span>
         </div>
-        <div class="qr-label">Контакт</div>
-        <div class="qr-sub">Нажать / Сканировать</div>
       </div>
 
-      <!-- QR 2: Приложение app.ninehair.ru (встроенный SVG) -->
-      <a href="https://ninehair.ru" target="_blank" class="qr-item">
-        <div class="qr-box">
-          <svg xmlns="http://w3.org" viewBox="0 0 25 25" shape-rendering="crispEdges">
-            <rect width="25" height="25" fill="#fff"/>
-            <path fill="#111" d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm7-2h2v1h-1v2h1v1H9V3h1V2H9zm4 0h2v2h-1v1h1v1h-2V3h1V2h-1zm5 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM8 5h1v2H8zm4 0h1v1h1v1h-2zm4 0h1v2h-1zM0 8h2v1H0zm4 0h3v2H5V9H4zm5 0h2v1h1v1H9zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM1 10h2v2H1zm5 0h2v1H7v1H6zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h3v1h-3zM0 12h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zM1 14h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zM0 16h2v1H0zm4 0h1v1h2v1H4zm5 0h2v1H9zm3 0h1v2h-1zm4 0h2v1h1v1h-3zm5 0h2v2h-2zM0 18h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zm6-2h1v2H8zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h2v1h-2zM8 21h2v1H9v1H8zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM8 23h1v2H8zm3 0h1v2h-1zm3 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v2h-2z"/>
-          </svg>
-        </div>
-        <div class="qr-label">Приложение</div>
-        <div class="qr-sub">app.ninehair.ru</div>
-      </a>
+      <!-- Два крупных QR в ряд: Приложение и Instagram -->
+      <div class="qr-row">
+        <a href="https://ninehair.ru" target="_blank" class="qr-item">
+          <div class="qr-box" id="qr-app"></div>
+          <div class="qr-label">Приложение</div>
+          <div class="qr-sub">app.ninehair.ru</div>
+        </a>
 
-      <!-- QR 3: Instagram ninehair.ru (встроенный SVG) -->
-      <a href="https://instagram.com" target="_blank" class="qr-item">
-        <div class="qr-box">
-          <svg xmlns="http://w3.org" viewBox="0 0 33 33" shape-rendering="crispEdges">
-            <rect width="33" height="33" fill="#fff"/>
-            <path fill="#111" d="M0 0h7v7H0zm1 1v5h5V1zm1 1h3v3H2zm7-2h2v1h-1v1h2v1H9v1h2v1H8V3h1V2H8V1h1zm4 0h3v1h-1v2h1v1h-3V3h1V1h-1zm5 0h2v1h-1v1h1v2h-2V3h1V2h-1zm4 0h1v2h2V1h1v3h-3v1h-1zm4 0h7v7h-7zm1 1v5h5V1zm1 1h3v3h-3zM8 6h1v1H8zm4 0h2v1h-2zm4 0h1v1h-1zm4 0h1v1h-1zm4 0h1v1h-1zM0 8h2v1H0zm4 0h3v2H5V9H4zm5 0h1v2H9zm3 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm2 0h1v1h-1zM1 10h2v2H1zm5 0h2v1H7v1H6zm5 0h1v1h-1zm4 0h2v1h-1v1h-1zm4 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v1h2v1h-3zM0 12h1v2H0zm3 0h2v1H4v1H3zm5 0h2v2H8zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zM1 14h2v1H1zm4 0h2v2H5zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zM0 16h2v2H0zm3 0h1v1h1v1H3zm5 0h1v1h1v1H8zm4 0h2v2h-2zm4 0h1v1h1v1h-2zm4 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zM1 18h1v2H1zm4 0h2v1H6v1H5zm4 0h2v2H9zm4 0h1v1h2v1h-3zm5 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zM0 20h1v1h2v1H0zm4 0h1v2H4zm4 0h1v1h1v1H8zm4 0h2v1h-2zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm3 0h1v1h-1zM1 22h2v2H1zm4 0h2v1H6v1H5zm5 0h1v2h-1zm3 0h2v1h1v1h-3zm5 0h1v2h-1zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM0 24h1v1h2v1H0zm4 0h1v1h2v1H4zm5 0h2v1H9zm3 0h1v2h-1zm4 0h2v1h1v1h-3zm5 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zM0 26h7v7H0zm1 1v5h5v-5zm1 1h3v3H2zm6-2h1v2H8zm3 0h2v1h-1v1h-1zm4 0h1v2h-1zm3 0h2v1h-1v1h-1zm5 0h1v2h-1zm4 0h2v1h-1v1h-1zm5 0h1v2h-1zM8 29h2v1H9v1H8zm4 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v1h-2zm4 0h1v2h-1zm4 0h2v2h-2zM8 31h1v2H8zm3 0h1v2h-1zm3 0h2v2h-2zm4 0h1v1h2v1h-3zm5 0h2v2h-2zm4 0h1v2h-1zm4 0h2v1h-1v1h-1z"/>
-          </svg>
-        </div>
-        <div class="qr-label">Instagram</div>
-        <div class="qr-sub">@ninehair.ru</div>
-      </a>
+        <a href="https://instagram.com" target="_blank" class="qr-item">
+          <div class="qr-box" id="qr-insta"></div>
+          <div class="qr-label">Instagram</div>
+          <div class="qr-sub">@ninehair.ru</div>
+        </a>
+      </div>
     </div>
   </div>
 
   <script>
-    function openVCard() {
-      const vcard = [
-        "BEGIN:VCARD",
-        "VERSION:3.0",
-        "N;CHARSET=UTF-8:Долгова;Ксения;;;",
-        "FN;CHARSET=UTF-8:Долгова Ксения",
-        "ORG;CHARSET=UTF-8:NINEHAIR",
-        "TITLE;CHARSET=UTF-8:Директор",
-        "TEL;TYPE=CELL:+79224479447",
-        "URL:https://instagram.com",
-        "END:VCARD"
-      ].join("\r\n");
+    // Встроенный автономный генератор QR (без загрузки из интернета)
+    const QR = (() => {
+      const EXP = new Uint8Array(512), LOG = new Uint8Array(256);
+      let x = 1;
+      for (let i = 0; i < 255; i++) {
+        EXP[i] = x; LOG[x] = i;
+        x <<= 1; if (x & 256) x ^= 285;
+      }
+      for (let i = 255; i < 512; i++) EXP[i] = EXP[i - 255];
 
-      const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
-      window.location.href = URL.createObjectURL(blob);
-    }
-  </script>
+      const mul = (a, b) => (a && b) ? EXP[LOG[a] + LOG[b]] : 0;
+      const polyMul = (p, q) => {
+        const r = new Uint8Array(p.length + q.length - 1);
+        for (let i = 0; i < p.length; i++)
+          for (let j = 0; j < q.length; j++) r[i + j] ^= mul(p[i], q[j]);
+        return r;
+      };
+      const rsGen = (n) => {
+        let g = new Uint8Array([1]);
+        for (let i = 0; i < n; i++) g = polyMul(g, new Uint8Array([1, EXP[i]]));
+        return g;
+      };
+      const rsRem = (data, gen) => {
+        const res = new Uint8Array(gen.length - 1);
+        for (let i = 0; i < data.length; i++) {
+          const factor = data[i] ^ res[0];
+          res.copyWithin(0, 1); res[res.length - 1] = 0;
+          if (factor) for (let j = 0; j < res.length; j++) res[j] ^= mul(gen[j + 1], factor);
+        }
+        return res;
+      };
 
-</body>
-</html>
+      // Таблица версий 1-10 (уровень коррекции L: [totalBytes, ecBytes, blocks])
+      const VER = [
+        null,
+, [44, 10, 1], [70, 15, 1], [100, 20, 1], [134, 26, 1],
+, [196, 20, 2], [242, 24, 2], [292, 30, 2], [346, 18, 4]
+      ];
+      const ALIGN = [[], [], [6,18], [6,22], [6,26], [6,30], [6,34], [6,22,38], [6,24,42], [6,26,46], [6,28,50]];
+
+      return function draw(canvas, text) {
+        const bytes = new TextEncoder().encode(text);
+        let v = 1;
+        while (v <= 10 && (VER[v][0] - VER[v][1] * VER[v][2]) < bytes.length + (v < 10 ? 2 : 3)) v++;
+        if (v > 10) return;
+
+        const [total, ecPerBlock, blocks] = VER[v];
+        const dataCap = total - ecPerBlock * blocks;
+        const bits = [];
+        const push = (val, len) => { for (let i = len - 1; i >= 0; i--) bits.push((val >> i) & 1); };
+        push(4, 4);
+        push(bytes.length, v < 10 ? 8 : 16);
+        bytes.forEach(b => push(b, 8));
+        push(0, Math.min(4, dataCap * 8 - bits.length));
+        while (bits.length % 8) bits.push(0);
+        const pad =;
+        for (let i = 0; bits.length < dataCap * 8; i++) push(pad[i % 2], 8);
+
+        const dataBytes = new Uint8Array(dataCap);
+        for (let i = 0; i < dataCap; i++)
+          for (let b = 0; b < 8; b++) dataBytes[i] = (dataBytes[i] << 1) | bits[i * 8 + b];
+
+        const gen = rsGen(ecPerBlock);
+        const dBlocks = [], eBlocks = [];
+        const shortBlocks = blocks - (dataCap % blocks);
+        const shortLen = Math.floor(dataCap / blocks);
+        let offset = 0;
+        for (let b = 0; b < blocks; b++) {
+          const len = shortLen + (b >= shortBlocks ? 1 : 0);
+          const db = dataBytes.slice(offset, offset + len);
+          offset += len;
+          dBlocks.push(db);
+          eBlocks.push(rsRem(db, gen));
+        }
+
+        const code = [];
+        for (let i = 0; i < shortLen + 1; i++)
+          for (let b = 0; b < blocks; b++) if (i < dBlocks[b].length) code.push(dBlocks[b][i]);
+        for (let i = 0; i < ecPerBlock; i++)
+          for (let b = 0; b < blocks; b++) code.push(eBlocks[b][i]);
+
+        const size = v * 4 + 17;
+        const grid = Array.from({ length: size }, () => new Int8Array(size));
+        const func = Array.from({ length: size }, () => new Uint8Array(size));
+        const set = (r, c, val, isFunc = true) => {
+          if (r >= 0 && r < size && c >= 0 && c < size) { grid[r][c] = val; if (isFunc) func[r][c] = 1; }
+        };
+        const finder = (r, c) => {
+          for (let dr = -1; dr <= 7; dr++)
+            for (let dc = -1; dc <= 7; dc++) {
+              const on = dr >= 0 && dr <= 6 && dc >= 0 && dc <= 6 && (dr === 0 || dr === 6 || dc === 0 || dc === 6 || (dr >= 2 && dr <= 4 && dc >= 2 && dc <= 4));
+              set(r + dr, c + dc, on ? 1 : 0);
+            }
+        };
+        finder(0, 0); finder(0, size - 7); finder(size - 7, 0);
+        const ap = ALIGN[v];
+        for (let i = 0; i < ap.length; i++)
+          for (let j = 0; j < ap.length; j++) {
+            if ((i === 0 && j === 0) || (i === 0 && j === ap.length - 1) || (i === ap.length - 1 && j === 0)) continue;
+            for (let dr = -2; dr <= 2; dr++)
+              for (let dc = -2; dc <= 2; dc++)
+                set(ap[i] + dr, ap[j] + dc, (Math.abs(dr) === 2 || Math.abs(dc) === 2 || (!dr && !dc)) ? 1 : 0);
+          }
